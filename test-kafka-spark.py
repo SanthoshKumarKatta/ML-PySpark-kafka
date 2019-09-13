@@ -19,6 +19,6 @@ kafkaStream = KafkaUtils.createStream(ssc, ZOOKEEPER, "spark-streaming123", {KAF
 print(3)
 lines = kafkaStream.map(lambda x: x[1])
 lines.pprint()
-lines.pprint()
+
 ssc.start()
 ssc.awaitTermination()
